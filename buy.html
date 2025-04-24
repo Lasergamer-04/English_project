@@ -37,13 +37,50 @@
         </nav>
     </header>
     <main class="container mx-auto p-6 mt-20">
-        <h1 class="text-4xl font-bold mb-6 text-center text-primary">Titanium Techbike Future</h1>
-        <p class="text-lg text-center mb-4 text-grayish">Thank you for choosing Titanium Techbikes!</p>
-        <p class="text-lg text-center mb-4 text-grayish">Your order will be placed after continuing.</p>
-        <p class="text-lg text-center mb-4 text-grayish">We will contact you shortly with the details.</p>
-        <p class="text-lg text-center mb-4 text-grayish">If you have any questions, feel free to reach out to us.</p>
-        <div class="text-center mt-6">
-            <a href="product.html" class="bg-primary text-dark py-2 px-4 rounded-md hover:bg-secondary transition duration-200">Continue Shopping</a>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Product Image -->
+            <div>
+                <img src="Images/velo.jpg" alt="Titanium Techbike Future" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <!-- Product Info with Size Buttons -->
+            <div>
+                <h1 class="text-4xl font-bold text-primary mb-6">Titanium Techbike Future</h1>
+                <p class="text-grayish text-lg mb-4">Select your size to continue:</p>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <button class="bg-grayish text-dark font-semibold px-4 py-2 rounded-md hover:bg-secondary transition">XS</button>
+                    <button class="bg-grayish text-dark font-semibold px-4 py-2 rounded-md hover:bg-secondary transition">S</button>
+                    <button class="bg-grayish text-dark font-semibold px-4 py-2 rounded-md hover:bg-secondary transition">M</button>
+                    <button class="bg-grayish text-dark font-semibold px-4 py-2 rounded-md hover:bg-secondary transition">L</button>
+                    <button class="bg-grayish text-dark font-semibold px-4 py-2 rounded-md hover:bg-secondary transition">XL</button>
+                </div>
+                <img src="Images/taille.jpg" alt="Size Guide" class="rounded-lg shadow-md">
+                <a href="product.html" class="mt-6 inline-block bg-primary text-dark font-semibold py-3 px-6 rounded-md hover:bg-secondary transition duration-200">
+                    Continue Shopping
+                </a>
+            </div>
+        </div>
+    
+        <!-- Technical Specifications -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-bold text-primary mb-6 border-b border-grayish pb-2">Technical Specifications</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-grayish">
+                <div>
+                    <ul class="space-y-2">
+                        <li><strong class="text-light">Frame:</strong> Ultra-light titanium</li>
+                        <li><strong class="text-light">Drivetrain:</strong> Shimano Dura-Ace Di2</li>
+                        <li><strong class="text-light">Wheels:</strong> Aero carbon 50mm</li>
+                        <li><strong class="text-light">Brakes:</strong> Hydraulic disc brakes</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-2">
+                        <li><strong class="text-light">Weight:</strong> 6.9 kg (size M)</li>
+                        <li><strong class="text-light">Available Sizes:</strong> XS to XL</li>
+                        <li><strong class="text-light">Warranty:</strong> Lifetime frame warranty</li>
+                        <li><strong class="text-light">Price:</strong> From €8,999</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="bg-dark text-grayish p-6 mt-10">
