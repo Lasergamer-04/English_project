@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Titanium Techbikes</title>
+    <title>Contact - Titanium Techbikes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,7 +20,6 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS -->
     <link rel="icon" href="Images/Logo.png" type="image/png">
 </head>
 <body class="bg-dark text-light">
@@ -38,20 +37,30 @@
         </nav>
     </header>
     <main class="container mx-auto p-6 mt-20">
-        <h1 class="text-4xl font-bold mb-6 text-center text-primary">Welcome to Titanium Techbikes</h1>
-        <p class="text-lg text-center mb-4 text-grayish">Your one-stop shop for high-quality bicycles.</p>
-        <p class="text-lg text-center mb-4 text-grayish">Explore our range of products and find the perfect bike for you.</p>
-        <p class="text-lg text-center mb-4 text-grayish">Contact us for any inquiries or support. We are here to help you with your cycling needs.</p>
-        <br/>
-        <h2 class="text-2xl font-bold mb-6 text-center text-secondary">Experience the Future of Cycling</h2>
-        <p class="text-lg text-center mb-6 text-grayish">Discover the innovation and performance of Titanium Techbikes.</p>
-        <button id="discover-now" class="bg-primary text-dark py-2 px-4 rounded-md hover:bg-secondary transition duration-200 mx-auto block">Discover Now</button>
+        <h1 class="text-4xl font-bold mb-6 text-center text-primary">Contact Us</h1>
+        <p class="text-lg text-center mb-4 text-grayish">We would love to hear from you! Please fill out the form below.</p>
+        <div class="bg-dark shadow-md shadow-light rounded-lg p-6 max-w-lg mx-auto">
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-grayish">Name</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full border border-grayish rounded-md shadow-sm focus:ring-primary focus:border-primary p-2">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-grayish">Email</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full border border-grayish rounded-md shadow-sm focus:ring-primary focus:border-primary p-2">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-grayish">Message</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border border-grayish rounded-md shadow-sm focus:ring-primary focus:border-primary p-2"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-dark py-2 px-4 rounded-md hover:bg-secondary transition duration-200">Send</button>
+            </form>
+        </div>
     </main>
     <footer class="bg-dark text-grayish p-6 mt-10">
         <div class="container mx-auto text-center">
             <p>&copy; 2025 Titanium Techbikes. All rights reserved.</p>
         </div>
     </footer>
-    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
 </body>
 </html>

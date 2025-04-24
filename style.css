@@ -1,107 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: lightblue;
-    background-color: black;
+/* Fade-in effect for the product page */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
-header, main, footer {
-    background-color: darkblue;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-header h1, main h2, footer p {
-    text-align: center;
-    font-size: 2em;
+/* Fullscreen overlay for cinematic transition */
+.cinematic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+/* Activate the overlay */
+.cinematic-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-nav button {
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+/* Slide-up animation for the overlay */
+.cinematic-overlay.active::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    animation: slide-up 1s ease-in-out forwards;
 }
 
-nav button a {
-    color: white;
-    text-decoration: none;
-}
-
-.product-section {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 20px;
-}
-
-.product-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.product-section h4, .product-section h5, .product-section h6 {
-    color: blueviolet;
-    font-size: 1.5em;
-}
-
-.product-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.product-section ul li {
-    margin-bottom: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: lightblue;
-}
-
-.button {
-    cursor: pointer;
-    width: 184px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1.125em;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: #fff;
-    background: #644dff;
-    border: 2px solid #4836bb;
-    border-radius: .75rem;
-    box-shadow: 0 8px 0 #4836bb;
-    transform: skew(-10deg);
-    transition: all .1s ease;
-    filter: drop-shadow(0 15px 20px rgba(100, 77, 255, 0.39));
-}
-
-.button:active {
-    letter-spacing: 0px;
-    transform: skew(-10deg) translateY(8px);
-    box-shadow: 0 0 0 rgba(100, 77, 255, 0.39);
-}
-
-@media (min-width: 768px) {
-    .product-section {
-        flex-direction: row-reverse;
+@keyframes slide-up {
+    from {
+        top: 100%;
+    }
+    to {
+        top: 0;
     }
 }
