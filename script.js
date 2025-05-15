@@ -29,3 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.removeItem('fadeIn'); // Clear the flag immediately
     }
 });
+
+// Highlight selected size button on the buy page
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sizeButtons = document.querySelectorAll('.flex.flex-wrap.gap-3.mb-6 .bg-grayish');
+    sizeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            sizeButtons.forEach(b =>
+                b.classList.remove('ring-2', 'ring-primary', 'bg-primary', 'text-dark')
+            );
+            this.classList.add('ring-2', 'ring-primary', 'bg-primary', 'text-dark');
+        });
+    });
+});
